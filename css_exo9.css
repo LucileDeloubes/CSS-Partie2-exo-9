@@ -1,30 +1,23 @@
-legend
-{
-    margin: 0px 0px -10px 0px;
-}
 .titre1
 {
-    margin: 0px 0px 0px 10px;
     border: solid #2574a9;  
     background-color: #2574a9;
        
 }
-.infoPerso
+#infoPerso
 {
     background-color: #2574a9;
-    padding: 10px;
     border-top: solid grey;
     border-left: solid grey;
 }
 .titre2
 {
     background-color: #9a12b3;  
-    margin: 0px 10px 0px;
+    
 }
-.livraison
+#livraison
 {
     background-color: #9a12b3;
-    padding: 10px;
     border-top: solid grey;
     border-left: solid grey;
 }
@@ -36,12 +29,15 @@ textarea
 .titre3
 {
     background-color: #db0a5b;
-    margin: 0px 10px 0px;
+    
 }
-.paiement
+#paiement
 {
     background-color: #db0a5b;
-    padding: 10px;
     border-top: solid grey;
     border-left: solid grey;
+}
+ul
+{
+    list-style-type: none;
 }

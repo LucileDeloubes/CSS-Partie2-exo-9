@@ -9,22 +9,22 @@
 </head>
 
 <body>
-    <form method="post">
-
-        <legend> <span class="titre1">Votre identifiant</span> </legend>
-        <div class="infoPerso">
-            <ol>
-                <li> <label for="Nom">Nom :</label>
-                    <input type="text" name="Nom" id="Nom" placeholder="Nom" autofocus></li>
-                <li><label for="firstName">Prénom :</label>
-                    <input type="text" name="firstName" id="firstName" placeholder="Prénom"></li>
-                <li><label for="mail">Adresse mail : :</label>
-                    <input type="text" name="mail" id="mail" placeholder="Adresse mail"></li>
-            </ol>
-        </div>
+    <form method="post" action="traitement.php"> <!-- l'attribut action permettra d'envoyer les données entrées sur une page de traitement d'infos php-->
+        <fieldset id="infoPerso"> <!-- sépare le formulaire en catégorie-->
+            <legend> <span class="titre1">Votre identifiant</span> </legend> <!-- titre entête du formulaire-->
+                <ol>
+                    <li> <label for="Nom">Nom :</label>
+                        <input type="text" name="Nom" id="Nom" placeholder="Nom" autofocus></li>
+                    <li><label for="firstName">Prénom :</label>
+                        <input type="text" name="firstName" id="firstName" placeholder="Prénom"></li>
+                    <li><label for="mail">Adresse mail : :</label>
+                        <input type="text" name="mail" id="mail" placeholder="Adresse mail"></li>
+                </ol>
+            
+        </fieldset>
+        <fieldset id="livraison">
         <legend> <span class="titre2">Adresse de livraison</span> </legend>
-        <div class="livraison">
-            <ol>
+             <ol>
                 <li><label for="adress">Adresse : </label>
                     <textarea name="adress" id="adress"></textarea></li>
                 <li><label for="postal">code postal :</label>
@@ -32,13 +32,15 @@
                 <li><label for="town">Ville :</label>
                     <input type="text" name="town" id="town" placeholder="Ville :"></li>
             </ol>
-        </div>
+        </fieldset>
+        <fieldset id="paiement">
         <legend> <span class="titre3"> Information de réglement</span></legend>
-        <div class="paiement">
-            <ol>
-                <li><label for="card">Type de carte bancaire : </label></br>
-                <input type="radio" name="card" value="visa"> VISA <br>
-                <input type="radio" name="card" value="mastercard"> Mastercard</li>
+             <ol>
+                <li><label for="card">Type de carte bancaire : </label></li>
+                     <ul>
+                         <li><input type="radio" name="card" value="visa"> VISA </li>
+                         <li><input type="radio" name="card" value="mastercard"> Mastercard</li>
+                     </ul>   
                 <li><label for="Number"> Numéro de carte :</label>
                     <input type="text" name="Number" id="Number" placeholder="Numéro de carte"></li>
                 <li><label for="security"> Code de sécurité :</label>
@@ -46,7 +48,7 @@
                 <li><label for="nameCard"> Nom du titulaire :</label>
                     <input type="text" name="nameCard" id="nameCard" placeholder="Nom du titulaire"></li>
             </ol>
-        </div>
+        </fieldset>
         <input type="submit" value="J'achète!">
     </form>
 </body>
